@@ -15,7 +15,7 @@ export function useTime() {
     error: swrError,
     mutate,
   } = useSWR(
-    'http://worldtimeapi.org/api/timezone/Africa/Johannesburg',
+    'https://worldtimeapi.org/api/timezone/Africa/Johannesburg',
     fetcher
   )
 
