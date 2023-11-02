@@ -1,27 +1,23 @@
-# React + TypeScript + Vite
+# React + Vite + SWR Progressive Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a demonstration of how to build a Progressive Web App (PWA) with offline capabilities using React, Vite, and SWR.
 
-Currently, two official plugins are available:
+## Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The purpose of this project is to demonstrate a basic progressive web application that is built with React, Vite, and SWR. It uses [vite-plugin-pwa](https://github.com/vite-pwa/vite-plugin-pwa) for it's PWA capabilities (including offline availabiliy).
 
-## Expanding the ESLint configuration
+This application fetches data from [WorldTimeAPI](http://worldtimeapi.org) and caches it using the basic [LocalStorage Based Persistent Cache](https://swr.vercel.app/docs/advanced/cache#localstorage-based-persistent-cache) example from [**SWR**](https://swr.vercel.app/), to make the last-fetched data available when offline.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies
 
-- Configure the top-level `parserOptions` property like this:
+- [**React**](https://react.dev/): A JavaScript library for building user interfaces.
+- [**Vite**](https://vitejs.dev/): A build tool that aims to provide a faster and leaner development experience for modern web projects.
+- [**SWR**](https://swr.vercel.app/): A React Hooks library for remote data fetching.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Getting Started
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone the repository
+2. Install dependencies with `yarn install`
+3. Start the PWA with `yarn pwa` (The normal development server can still be started with `yarn dev`, but PWA features will not be available)
+
+Enjoy exploring and building upon this project!
