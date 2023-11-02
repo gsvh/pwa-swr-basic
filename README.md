@@ -4,9 +4,11 @@ This project is a demonstration of how to build a Progressive Web App (PWA) with
 
 ## Purpose
 
-The purpose of this project is to demonstrate a basic progressive web application that is built with React, Vite, and SWR. It uses [vite-plugin-pwa](https://github.com/vite-pwa/vite-plugin-pwa) for it's PWA capabilities (including offline availabiliy).
+The purpose of this project is to demonstrate a basic progressive web application that is built with React, Vite, and SWR.
 
-This application fetches data from [WorldTimeAPI](http://worldtimeapi.org) and caches it using the basic [LocalStorage Based Persistent Cache](https://swr.vercel.app/docs/advanced/cache#localstorage-based-persistent-cache) example from [**SWR**](https://swr.vercel.app/), to make the last-fetched data available when offline.
+For caching static assets and pages for offline use, it uses [vite-plugin-pwa](https://github.com/vite-pwa/vite-plugin-pwa).
+
+For caching data for offline use, it uses the basic [LocalStorage Based Persistent Cache](https://swr.vercel.app/docs/advanced/cache#localstorage-based-persistent-cache) example from [**SWR**](https://swr.vercel.app/). The data being used in this example is time information from [WorldTimeAPI](http://worldtimeapi.org).
 
 ## Technologies
 
@@ -19,5 +21,11 @@ This application fetches data from [WorldTimeAPI](http://worldtimeapi.org) and c
 1. Clone the repository
 2. Install dependencies with `yarn install`
 3. Start the PWA with `yarn pwa` (The normal development server can still be started with `yarn dev`, but PWA features will not be available)
+
+## Demo
+
+<https://pwa-with-swr-cache-basic-example.onrender.com>
+
+You'll see two cards, one that shows the browser time (using JavaScript Date), and one that shows the time from the API. Once you have downloaded the application, you should be able to open the application even if you have no internet connection, and see the last fetched API time.
 
 Enjoy exploring and building upon this project!
