@@ -1,11 +1,15 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
+
 .pizza {
   border-radius: 50%;
+}
+
+.swr {
+  aspect-ratio: 1 / 1;
 }
 
 .logo {
@@ -20,8 +24,8 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-.logo.pizza:hover {
-  filter: drop-shadow(0 0 2em #ee861faa);
+.logo.swr:hover {
+  filter: drop-shadow(0 0 1em #000000);
 }
 
 @keyframes logo-spin {
@@ -34,19 +38,33 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
+  a:nth-of-type(3) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
-.card {
+.container {
   padding: 2em;
-  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.time-card {
+  width: 10em;
+  padding: 0.5em;
+  border: 1px solid #ee871f;
+  border-radius: 0.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.status {
+  color: #101010;
 }
 
 .error {
@@ -55,4 +73,16 @@
   border-radius: 20px;
   padding: 20px;
   margin: 20px;
+}
+
+/* responsiveness */
+@media (max-width: 600px) {
+  .logo {
+    height: 3em;
+  }
+
+  .time-card {
+    padding: 0.7em;
+    width: 7em;
+  }
 }
